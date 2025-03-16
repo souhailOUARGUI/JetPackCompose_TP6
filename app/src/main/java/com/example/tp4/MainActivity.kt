@@ -16,7 +16,7 @@ import com.example.tp4.ui.theme.TP4Theme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { Text("Bonjour toue monde") }
+        setContent { Text("Bonjour tout le monde") }
     }
 }
 
