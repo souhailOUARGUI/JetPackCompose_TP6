@@ -17,10 +17,22 @@ import androidx.compose.ui.unit.sp
 import com.example.tp4.ui.theme.TP4Theme
 
 class MainActivity : ComponentActivity() {
+
+
 @Composable
 fun Acceuil(name: String){
     Text(text = "Bonjour $name", fontSize = 20.sp)
 }
+    @Preview
+    @Composable
+    fun AccueilPreview() {
+        Accueil(name = "numéro 10")
+    }
+
+    private @Composable
+    fun Accueil(name: String) {
+        Text(text = "Bonjour $name", fontSize = 20.sp)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
