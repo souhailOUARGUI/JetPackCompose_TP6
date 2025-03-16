@@ -1,0 +1,1 @@
+The aim of this tutorial is to discover the new Android API called Jetpack Compose. This is the one recommended by Google. It's based on concepts that are totally different from what we've seen in previous tutorials, apart from the notion of activity.
