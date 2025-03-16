@@ -17,14 +17,14 @@ import androidx.compose.ui.unit.sp
 import com.example.tp4.ui.theme.TP4Theme
 
 class MainActivity : ComponentActivity() {
+@Composable
+fun Acceuil(name: String){
+    Text(text = "Bonjour $name", fontSize = 20.sp)
+}
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { Text(
-            text = "Bonjour tout le monde !",
-            fontWeight = FontWeight.Bold,
-            fontSize = 32.sp,
-            color = Color.Magenta
-        ) }
+        setContent { Acceuil(name = "numéro 6")}
     }
 }
 
