@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -22,8 +23,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Acceuil(name: String){
     Text(text = "Bonjour $name", fontSize = 20.sp)
+
 }
-    @Preview
+    @Preview(showBackground = true)
     @Composable
     fun AccueilPreview() {
         Accueil(name = "numéro 10")
@@ -31,8 +33,13 @@ fun Acceuil(name: String){
 
     private @Composable
     fun Accueil(name: String) {
-        Text(text = "Bonjour $name", fontSize = 20.sp)
+        Column {
+            Text(text = "Bonjour $name", fontSize = 20.sp)
+            Text(text= "Je vois de grands progrès ",color = Color.Blue )
+        }
     }
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
