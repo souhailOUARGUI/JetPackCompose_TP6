@@ -26,6 +26,14 @@ fun MainActivityFeu3View(viewmodel: Feu3ViewModel = viewModel()) {
         Feu3ViewV1(state, modifier = Modifier.padding(16.dp))
 // bouton, voir la suite du TP
     }
+    Button(
+        onClick = {
+            viewmodel.suivant() // modif par le contrôleur
+        },
+        modifier = Modifier.fillMaxWidth().padding(32.dp)
+    ) {
+        Text(text = "état suivant")
+    }
 }
 
 @Composable
