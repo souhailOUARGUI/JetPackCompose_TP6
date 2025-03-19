@@ -13,10 +13,12 @@ import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tp4.ui.theme.TP4Theme
 
@@ -28,24 +30,25 @@ fun Acceuil(name: String){
     Text(text = "Bonjour $name", fontSize = 20.sp)
 
 }
-    @Preview(showBackground = true)
-    @Composable
-    fun AccueilPreview() {
+@Preview(showBackground = true)
+@Composable
+fun AccueilPreview() {
         Accueil(name = "numéro 10")
     }
 
-    private @Composable
-    fun Accueil(name: String) {
+private @Composable
+fun Accueil(name: String, modifier: Modifier= Modifier) {
 
-        Row  {
-            Text(text = "Bonjour $name", fontSize = 20.sp)
-            Text(text= "Je vois de grands progrès ",color = Color.Blue )
-        }
         ElevatedCard  {
-            Text(text = "Bonjour $name", fontSize = 20.sp)
-            Text(text= "Je vois de grands progrès ",color = Color.Blue )
-        }
-    }
+            Column(modifier = modifier.padding(8.dp),
+                horizontalAlignment = Alignment.CenterHorizontally )
+            {
+                Text(text = "Bonjour $name", fontSize = 30.sp, modifier = Modifier.padding(15.dp))
+                Text(text = "Je vois de grands progrès ", color = Color.Blue)
+            }
+}
+
+}
 
 
 
