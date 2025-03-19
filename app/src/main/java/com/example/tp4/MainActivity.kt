@@ -33,21 +33,18 @@ fun Acceuil(name: String){
 @Preview(showBackground = true)
 @Composable
 fun AccueilPreview() {
-        Accueil(name = "numéro 10")
+        AccueilMultiple( listOf("pierre", "paul","jean", "jack"))
     }
 
 private @Composable
-fun Accueil(name: String, modifier: Modifier= Modifier) {
-
-        ElevatedCard  {
-            Column(modifier = modifier.padding(8.dp),
-                horizontalAlignment = Alignment.CenterHorizontally )
-            {
-                Text(text = "Bonjour $name", fontSize = 30.sp, modifier = Modifier.padding(15.dp))
-                Text(text = "Je vois de grands progrès ", color = Color.Blue)
+fun AccueilMultiple(names: List<String>) {
+    Column{
+        for (name in names){
+            if(name.startsWith("p")) {
+                Text(text = "bonjour $name ! ", modifier = Modifier.padding(4.dp))
             }
-}
-
+        }
+    }
 }
 
 
