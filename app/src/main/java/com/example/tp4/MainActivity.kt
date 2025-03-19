@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tp4.ui.theme.TP4Theme
 
+
 class MainActivity : ComponentActivity() {
 
 
@@ -33,16 +34,14 @@ fun Acceuil(name: String){
 @Preview(showBackground = true)
 @Composable
 fun AccueilPreview() {
-        AccueilMultiple( listOf("pierre", "paul","jean", "jack"))
+        AccueilMultiple( listOf("pierre", "paul", "jack"))
     }
 
 private @Composable
 fun AccueilMultiple(names: List<String>) {
     Column{
         for (name in names){
-            if(name.startsWith("p")) {
-                Text(text = "bonjour $name ! ", modifier = Modifier.padding(4.dp))
-            }
+            Text(text =  "bonjour $name ! ", modifier = Modifier.padding(4.dp))
         }
     }
 }
